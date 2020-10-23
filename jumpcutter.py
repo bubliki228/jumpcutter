@@ -15,7 +15,7 @@ from pytube import YouTube
 def downloadFile(url):
     #name = YouTube(url).streams.first().download()
     streams = Youtube(url).streams
-    #streams.filter(progressive=True, res="720p")
+    streams.filter(progressive=True, res="720p")
     streams.order_by('resolution').desc().first()
     name = streams.first().download()
     newname = name.replace(' ','_')
