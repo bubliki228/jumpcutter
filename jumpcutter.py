@@ -17,7 +17,7 @@ def downloadFile(url):
     streams = Youtube(url).streams
     #streams.filter(progressive=True, res="720p")
     #video_best = streams.order_by('resolution').desc().first()
-    name = streams.order_by('resolution').desc().first().download()
+    name = streams.first().download()
     newname = name.replace(' ','_')
 
     os.rename(name,newname)
