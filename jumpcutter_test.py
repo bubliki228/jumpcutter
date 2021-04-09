@@ -108,7 +108,7 @@ subprocess.call(command, shell=True, stdout=f)
 
 
 sampleRate, audioData = wavfile.read(TEMP_FOLDER+"/audio.wav")
-sampleRate, audioMyData = wavfile.read(TEMP_FOLDER+"/Myaudio.wav")
+sampleRate, audioMyData = wavfile.read(TEMP_FOLDER+"/MyAudio.wav")
 
 audioSampleCount = audioData.shape[0]
 maxAudioVolume = getMaxVolume(audioData)
